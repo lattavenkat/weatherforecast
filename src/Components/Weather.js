@@ -16,15 +16,18 @@ const Weather = ({ description, city, country, error, temperature }) => {
   }
 
   return (
-    <div><div>
-      {city && country && (
-        <p>
-          {city} , {country}
-        </p>
-      )}</div>
+    <div>
+      <div>
+        {city && country && (
+          <p>
+            {city} , {country}
+          </p>
+        )}
+      </div>
       <div id="go">
-        CURRENT TEMPERATURE IN YOUR PLACE:{temperature && <p>{temperature} °F</p>}
-        </div>
+        CURRENT TEMPERATURE IN YOUR PLACE:
+        {temperature && <p>{temperature} °F</p>}
+      </div>
       {description && <p> Conditions: {description}</p>}
       {error && <p>{error}</p>}
       {description && matchValues()}
